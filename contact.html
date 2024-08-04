@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">
+                The Entrepreneurship Network
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="process.html">Process</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, feel free to reach out to us via email: <a href="mailto:tech@entrepreneurshipnetwork.net">tech@entrepreneurshipnetwork.net</a></p>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <a id="sendMessageButton" href="#" onclick="sendMail()">Send Message</a>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p>Contact us: <a href="mailto:tech@entrepreneurshipnetwork.net">tech@entrepreneurshipnetwork.net</a></p>
+            <p>&copy; 2024 Hackathon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendMail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const mailtoLink = `mailto:tech@entrepreneurshipnetwork.net?subject=New message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
