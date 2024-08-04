@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-    background-color: #444444;
+    background-color: #050505;
     color: white;
     padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,6 @@ body {
 .navbar .brand {
     font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
 }
 
 .navbar .nav-links {
@@ -47,89 +46,62 @@ body {
     text-decoration: underline;
 }
 
-.header {
-    background-color: #666666;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.header p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.details {
+.process {
     padding: 40px 0;
     background-color: #fff;
     text-align: center;
 }
 
-.details h2 {
+.process h2 {
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-.cards-container {
+.process-steps {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.card {
-    background-color: white;
+.step {
+    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     width: 100%;
     max-width: 300px;
-    margin: 20px;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card img {
-    width: 100%;
-    border-bottom: 1px solid #ddd;
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.card h3 {
-    margin-top: 10px;
+.step-icon {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
-.card p {
-    margin: 5px 15px;
+.step h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.step p {
     font-size: 16px;
     color: #555;
-}
-
-.card button {
-    display: block;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 15px;
-    border-radius: 4px;
-    font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.card button:hover {
-    background-color: #0056b3;
-}
-
-.card:hover {
-    transform: translateY(-10px);
 }
 
 .footer {
@@ -144,25 +116,17 @@ body {
 }
 
 @media (min-width: 600px) {
-    .navbar .nav-links {
-        justify-content: flex-end;
-    }
-
-    .navbar .nav-links li {
-        margin: 0 20px;
-    }
-
-    .cards-container {
+    .process-steps {
         justify-content: space-between;
     }
 
-    .card {
-        flex: 0 0 calc(50% - 40px); /* 2 cards per row with 20px gap */
+    .step {
+        flex: 0 0 calc(50% - 40px); /* 2 steps per row with 20px gap */
     }
 }
 
 @media (min-width: 900px) {
-    .card {
-        flex: 0 0 calc(33.333% - 40px); /* 3 cards per row with 20px gap */
+    .step {
+        flex: 0 0 calc(33.333% - 40px); /* 3 steps per row with 20px gap */
     }
 }
